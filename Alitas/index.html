@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Alitas | Restaurante</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(
+                90deg,
+                #ffcc00,
+                #ff7a00,
+                #ff4500
+            );
+            box-shadow: 0 4px 15px rgba(255, 122, 0, 0.35);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8px 10px; /* height OK, width reduced */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo {
+            width: 40px;
+        }
+
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            padding-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Watermark background */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                url("imagem.png") center 95%/ 520px no-repeat,
+                url("hamburgers.png") center 5% / cover no-repeat,
+                linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78));
+            opacity: 0.25;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 180px;
+            margin-bottom: 25px;
+        }
+
+        .brand-name {
+            font-size: 3.2rem;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffcc00, #ff7a00, #ff4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 12px rgba(255, 122, 0, 0.4);
+        }
+
+        .slogan {
+            font-size: 1.05rem;
+            color: #d4af37;
+            line-height: 1.6;
+        }
+
+        /* ================= FOOTER ================= */
+        /* FOOTER */
+        footer {
+            background: linear-gradient(90deg, #ffcc00, #ff7a00, #ff4500);
+            padding: 4px;
+            text-align: center;
+            color: #111;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            margin: 2px 0;
+            font-weight: 500;
+        }
+
+        /* ================= MOBILE ================= */
+        @media (max-width: 768px) {
+            nav a {
+                margin-left: 15px;
+                font-size: 0.9rem;
+            }
+
+            .brand-name {
+                font-size: 2.6rem;
+            }
+
+            .logo {
+                width: 150px;
+            }
+
+            .hero::before {
+                background: url("imagem.png") center / 380px no-repeat,
+                            linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+    <div class="header-container">
+        <img src="imagem.png" alt="Alitas Logo" class="header-logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menu</a>
+            <a href="localizacoes.html">Localizações</a>
+            <a href="contactos.html">Contactos</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="hero-content">
+        <img src="imagem.png" alt="Alitas Logo" class="logo">
+        <h1 class="brand-name">ALITAS</h1>
+        <p class="slogan">
+            Alitas é um restaurante moderno que combina sabor,
+            qualidade e um ambiente profissional. Estamos presentes em Maputo e Matola
+            para servir refeições deliciosas todos os dias.
+        </p>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>Aberto todos os dias · 11:00 – 22:00</p>
+    <p>© 2025 ALITAS. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

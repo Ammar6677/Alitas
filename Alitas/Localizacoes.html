@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Localizações | Alitas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background:
+                linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
+                url("imagem.png") center / 380px no-repeat;
+            color: #ffffff;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(
+                90deg,
+                #ffcc00,
+                #ff7a00,
+                #ff4500
+            );
+            box-shadow: 0 4px 15px rgba(255, 122, 0, 0.35);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8px 10px; /* height OK, width reduced */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo {
+            width: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+
+        /* MAIN */
+        main {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        main h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ffcc00, #ff7a00, #ff4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        main p {
+            color: #cccccc;
+            margin-bottom: 40px;
+        }
+
+        /* LOCATIONS */
+        .locations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .location-card {
+            background: rgba(26, 26, 26, 0.88);
+            backdrop-filter: blur(6px);
+            border-radius: 18px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .location-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(255,122,0,0.25);
+        }
+
+        .location-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ffcc00, #ff7a00, #ff4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .location-card p {
+            font-size: 14px;
+            color: #bbbbbb;
+            margin-bottom: 18px;
+        }
+
+        .location-card a {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #ffcc00, #ff7a00, #ff4500);
+            color: #1a1a1a;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .location-card a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255,122,0,0.4);
+        }
+
+        /* FOOTER */
+        footer {
+            max-width: 900px;
+            margin: 80px auto 30px;
+            padding: 10px 30px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #ff4500, #ff7a00, #ffcc00);
+            text-align: center;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        footer p {
+            margin: 4px 0;
+            font-size: 0.85rem;
+        }
+
+                            /* ================= MOBILE ================= */
+        @media (max-width: 768px) {
+            nav a {
+                margin-left: 15px;
+                font-size: 0.9rem;
+            }
+
+            .brand-name {
+                font-size: 2.6rem;
+            }
+
+            .logo {
+                width: 150px;
+            }
+
+            .hero::before {
+                background: url("imagem.png") center / 380px no-repeat,
+                            linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78));
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <img src="imagem.png" alt="Alitas Logo" class="header-logo">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="menu.html">Menu</a>
+                <a href="localizacoes.html">Localizações</a>
+                <a href="contactos.html">Contactos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+    <h2>Onde Estamos</h2>
+    <p>Escolha a unidade mais próxima de si em Maputo ou Matola.</p>
+
+    <!-- MAPUTO -->
+    <section class="city-section">
+        <h3 class="city-title">Maputo</h3>
+
+        <div class="locations">
+            <div class="location-card">
+                <h4>Alitas – Loja Ronil</h4>
+                <a href="https://maps.app.goo.gl/rbD4N8opnUAKbb9z5">Ver no Google Maps</a>
+            </div>
+
+            <div class="location-card">
+                <h4>Alitas – Loja Jardim</h4>
+                <a href="https://maps.app.goo.gl/iyahfiaZHDdtgi3W9">Ver no Google Maps</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MATOLA -->
+    <section class="city-section">
+        <h3 class="city-title">Matola</h3>
+
+        <div class="locations">
+            <div class="location-card">
+                <h4>Alitas – Loja Matola</h4>
+                <a href="https://maps.app.goo.gl/re5UozdX7m6wjn7c6">Ver no Google Maps</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Aberto todos os dias · 11:00 – 22:00</p>
+        <p>© 2025 ALITAS. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu | Alitas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(90deg, #ffcc00, #ff7a00, #ff4500);
+            box-shadow: 0 4px 15px rgba(255, 122, 0, 0.35);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            width: 40px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        /* MENU IMAGE */
+        .menu-wrapper {
+            padding: 120px 15px 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu-image {
+            max-width: 100%;
+            width: 900px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(90deg, #ffcc00, #ff7a00, #ff4500);
+            padding: 4px;
+            text-align: center;
+            color: #111;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            margin: 2px 0;
+            font-weight: 500;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            nav a {
+                margin-left: 15px;
+                font-size: 0.9rem;
+            }
+
+            .menu-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <img src="imagem.png" alt="Alitas Logo" class="header-logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menu</a>
+            <a href="localizacoes.html">Localizações</a>
+            <a href="contactos.html">Contactos</a>
+        </nav>
+    </div>
+</header>
+
+<!-- MENU IMAGE -->
+<section class="menu-wrapper">
+    <img src="menu.jpg" alt="Menu Alitas" class="menu-image">
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>Aberto todos os dias · 11:00 – 22:00</p>
+    <p>© 2025 ALITAS. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
